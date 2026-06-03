@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypertube Auth Flow Lab</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header card">
+      <div>
+        <h1>Hypertube Auth Flow Lab</h1>
+        <p>Interactive auth state machine and route simulator</p>
+      </div>
+      <div class="header-actions">
+        <button id="resetBtn" class="ghost">Reset simulation</button>
+        <button id="exportBtn">Export flow log</button>
+      </div>
+    </header>
+
+    <aside class="left card">
+      <h2>Flow Screens</h2>
+      <div id="screenList" class="screen-list"></div>
+    </aside>
+
+    <main class="center card">
+      <h2>State Machine</h2>
+      <div id="stateMachine" class="state-machine"></div>
+      <section class="simulator card-sub" id="simulator"></section>
+    </main>
+
+    <section class="right card">
+      <h2>Inspector</h2>
+      <dl id="inspector" class="inspector"></dl>
+    </section>
+
+    <section class="bottom card">
+      <h2>Event Timeline</h2>
+      <ol id="timeline" class="timeline"></ol>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
