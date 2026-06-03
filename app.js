@@ -406,8 +406,9 @@ function renderScreen() {
   simulator.appendChild(title);
 
   if (appState.currentScreen === 'Login') {
-    const form = document.createElement('div');
+    const form = document.createElement('form');
     form.className = 'form-grid';
+    form.addEventListener('submit', (event) => event.preventDefault());
     form.innerHTML = `
       <input id="loginIdentity" placeholder="username/email" value="user@hypertube.dev" />
       <input id="loginPassword" type="password" placeholder="password" value="strongpassword" />
